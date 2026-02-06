@@ -1,0 +1,67 @@
+# =======================
+# Environment & Secrets
+# =======================
+.env
+.env.local
+.env.*.local
+
+# =======================
+# Python
+# =======================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# =======================
+# Generated Output
+# =======================
+output/
+temp_*
+cache/
+
+# =======================
+# Cached Assets (regenerated at runtime)
+# =======================
+assets/icons/cert_cache/
+assets/icons/pillow_cache/
+
+# =======================
+# Logs
+# =======================
+*.log
+logs/
+
+# =======================
+# IDE / Editor
+# =======================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =======================
+# OS Files
+# =======================
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# =======================
+# Test / Debug / One-off Scripts
+# =======================
+test_output/
+debug_*.py
+debug_*.pptx
+check_groq_models.py
+setup_icons.py
+groq_models.txt
