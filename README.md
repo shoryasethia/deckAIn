@@ -113,45 +113,45 @@ python batch_generate.py
 
 ```
                     ┌─────────────────────────────────────┐
-                    │         Company OnePager.md          │
+                    │         Company OnePager.md         │
                     └──────────────┬──────────────────────┘
                                    │
               ┌────────────────────┼────────────────────┐
-              ▼                    ▼                     ▼
-     ┌────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+              ▼                    ▼                    ▼
+     ┌─────────────────┐  ┌──────────────────┐  ┌─────────────────┐
      │  1. Financial   │  │  2. Chart Spec   │  │  5. Image       │
      │     Extraction  │  │     Generation   │  │     Sourcing    │
      │  (Gemini API)   │  │  (Sector-aware)  │  │  (Unsplash/DDG) │
-     └───────┬────────┘  └───────┬─────────┘  └───────┬─────────┘
-             │                   │                     │
-             ▼                   │                     │
-     ┌────────────────┐          │                     │
+     └───────┬─────────┘  └───────┬──────────┘  └───────┬─────────┘
+             │                    │                     │
+             ▼                    │                     │
+     ┌─────────────────┐          │                     │
      │  3. Content     │          │                     │
      │     Generation  │◄─────────┘                     │
      │  (Gemini API)   │                                │
-     └───────┬────────┘                                │
-             │                                         │
-             ▼                                         │
-     ┌────────────────┐                                │
+     └───────┬─────────┘                                │
+             │                                          │
+             ▼                                          │
+     ┌─────────────────┐                                │
      │  4. Citations   │                                │
      │     Builder     │                                │
-     └───────┬────────┘                                │
-             │                                         │
-             └──────────────┬──────────────────────────┘
-                            ▼
-                   ┌─────────────────┐
+     └───────┬─────────┘                                │
+             │                                          │
+             └───────────────┬──────────────────────────┘
+                             ▼
+                   ┌──────────────────┐
                    │  6. PPT Assembly │
                    │  (python-pptx)   │
-                   └───────┬─────────┘
+                   └───────┬──────────┘
                            ▼
-                   ┌─────────────────┐
+                   ┌──────────────────┐
                    │  7. Compliance   │
                    │     Validation   │
-                   └───────┬─────────┘
+                   └───────┬──────────┘
                            ▼
-                   ┌─────────────────┐
+                   ┌──────────────────┐
                    │   .pptx + .docx  │
-                   └─────────────────┘
+                   └──────────────────┘
 ```
 
 **7 stages** execute sequentially:
@@ -279,38 +279,6 @@ Each sector customizes KPIs, certifications, image queries, and slide terminolog
 
 ---
 
-## Troubleshooting
-
-| Error | Fix |
-|---|---|
-| `No module named 'google.genai'` | `pip install -r requirements.txt` |
-| `GOOGLE_API_KEY not found` | Add your key to `.env` |
-| `No module named 'ddgs'` | `pip install ddgs` |
-| Images not appearing | Add `UNSPLASH_ACCESS_KEY` to `.env` |
-| Charts not editable | Ensure `python-pptx>=0.6.23` |
-| Compliance score 0% | Check logs for which critical check failed |
-
----
-
-## Programmatic Usage
-
-```python
-from main import TeaserPipeline
-
-pipeline = TeaserPipeline()
-result = pipeline.generate_teaser(
-    markdown_path="../Company Data/pharma-ind-swift/Ind Swift-OnePager.md",
-    sector="Pharma",
-    company_name="Ind Swift"
-)
-
-print(f"Saved: {result['pptx_path']}")
-print(f"Tokens: {result['stats']['total_tokens']:,}")
-print(f"Compliance: {result['compliance'].overall_score:.0f}%")
-```
-
----
-
 ## Design Decisions
 
 | Choice | Rationale |
@@ -330,4 +298,4 @@ MIT
 
 ---
 
-*Built for the Kelp M&A automation challenge — January 2026.*
+*Built for the Kelp M&A automation challenge (AI-ML GC IIT Bombay) — Jan - Feb 2026.*
