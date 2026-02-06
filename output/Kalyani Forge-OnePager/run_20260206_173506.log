@@ -1,0 +1,115 @@
+2026-02-06 17:35:06,663 | INFO     | __main__ | Log file: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Kalyani Forge-OnePager\run_20260206_173506.log
+2026-02-06 17:35:06,663 | INFO     | extractors.private_data | [>] [1/7] Private Data Extraction - START
+2026-02-06 17:35:06,665 | INFO     | extractors.private_data | Read markdown file: Kalyani Forge-OnePager.md (42404 chars)
+2026-02-06 17:35:06,665 | INFO     | extractors.private_data | Uploading markdown to Gemini File API...
+2026-02-06 17:35:06,665 | INFO     | utils.llm_client | Uploading file to Gemini API: Kalyani Forge-OnePager.md (42427 bytes)
+2026-02-06 17:35:09,027 | INFO     | utils.llm_client | File uploaded: files/3gj8zfs1tcqq
+2026-02-06 17:35:09,028 | INFO     | extractors.private_data | Calling LLM for financial data extraction (using File API)...
+2026-02-06 17:35:32,286 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 23,012 | Out: 747 | Total: 23,759 tokens
+2026-02-06 17:35:32,288 | INFO     | extractors.private_data | Financial data validated successfully
+2026-02-06 17:35:32,288 | INFO     | extractors.private_data | Calculated metrics: CAGR, margins
+2026-02-06 17:35:32,289 | INFO     | extractors.private_data | [OK] [1/7] Private Data Extraction - DONE
+2026-02-06 17:35:32,290 | INFO     | generators.chart_data | [>] [2/7] Chart Data Preparation - START
+2026-02-06 17:35:32,291 | INFO     | generators.chart_data | Using sector-specific chart configuration for Manufacturing
+2026-02-06 17:35:32,291 | INFO     | generators.chart_data | Sliced financial data to last 7 years for readability
+2026-02-06 17:35:32,295 | INFO     | generators.chart_data |  Created financial trends chart spec
+2026-02-06 17:35:32,297 | INFO     | generators.chart_data |  Created margin evolution chart spec
+2026-02-06 17:35:32,297 | INFO     | generators.chart_data | [OK] [2/7] Chart Data Preparation - DONE
+2026-02-06 17:35:32,298 | INFO     | generators.chart_data | Generated 2 chart specifications
+2026-02-06 17:35:32,299 | INFO     | generators.content | [>] [3/7] Content Generation - START
+2026-02-06 17:35:32,300 | INFO     | extractors.markdown_parser | Parsing markdown: Kalyani Forge-OnePager.md
+2026-02-06 17:35:32,344 | INFO     | extractors.markdown_parser | Parsed 26 content sections
+2026-02-06 17:35:32,344 | INFO     | generators.content | Parsed markdown for LLM context
+2026-02-06 17:35:32,344 | INFO     | generators.content | Fetching public market data for sector: Manufacturing
+2026-02-06 17:35:32,346 | INFO     | extractors.public_data | [>] [1/7] Public Data Scraping - START
+2026-02-06 17:35:32,346 | INFO     | extractors.public_data | Scraping public data for sector: Manufacturing
+2026-02-06 17:35:34,278 | INFO     | extractors.public_data | Found 3 market size sources
+2026-02-06 17:35:36,406 | INFO     | extractors.public_data | Found 3 trend sources
+2026-02-06 17:35:38,531 | INFO     | extractors.public_data | Found 2 competitive sources
+2026-02-06 17:35:40,922 | INFO     | extractors.public_data | Found 2 news sources
+2026-02-06 17:35:40,923 | INFO     | extractors.public_data | Total public sources collected: 10
+2026-02-06 17:35:40,924 | INFO     | extractors.public_data | [OK] [1/7] Public Data Scraping - DONE
+2026-02-06 17:35:40,925 | INFO     | generators.content | Applied Manufacturing-specific guidance to prompts
+2026-02-06 17:35:40,926 | INFO     | generators.content | Generating Slide 2 (Business Profile) & Anonymization...
+2026-02-06 17:36:01,780 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,514 | Out: 601 | Total: 3,115 tokens
+2026-02-06 17:36:01,781 | INFO     | generators.content | Generated Codename: Project Vulcan
+2026-02-06 17:36:01,781 | INFO     | generators.content | Generating Slide 3 (Growth Narrative)...
+2026-02-06 17:36:21,048 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,139 | Out: 191 | Total: 2,330 tokens
+2026-02-06 17:36:21,048 | INFO     | generators.content | Generating Slide 4 (Investment Highlights)...
+2026-02-06 17:36:41,071 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 3,008 | Out: 430 | Total: 3,438 tokens
+2026-02-06 17:36:41,071 | INFO     | generators.content | Slide content validated successfully
+2026-02-06 17:36:41,071 | WARNING  | generators.content | Company name found in content: 'kalyani forge'
+2026-02-06 17:36:41,071 | INFO     | generators.content | Anonymization verified: Project Vulcan
+2026-02-06 17:36:41,072 | INFO     | generators.content | [OK] [3/7] Content Generation - DONE
+2026-02-06 17:36:41,072 | INFO     | extractors.public_data | [>] [1/7] Public Data Scraping - START
+2026-02-06 17:36:41,072 | INFO     | extractors.public_data | Scraping public data for sector: Manufacturing
+2026-02-06 17:36:43,378 | INFO     | extractors.public_data | Found 3 market size sources
+2026-02-06 17:36:44,605 | INFO     | extractors.public_data | Found 3 trend sources
+2026-02-06 17:36:47,271 | INFO     | extractors.public_data | Found 2 competitive sources
+2026-02-06 17:36:48,684 | INFO     | extractors.public_data | Found 2 news sources
+2026-02-06 17:36:48,685 | INFO     | extractors.public_data | Total public sources collected: 10
+2026-02-06 17:36:48,685 | INFO     | extractors.public_data | [OK] [1/7] Public Data Scraping - DONE
+2026-02-06 17:36:48,685 | INFO     | generators.citations | [>] [4/7] Citations Document - START
+2026-02-06 17:36:48,754 | INFO     | generators.citations | [OK] [4/7] Citations Document - DONE
+2026-02-06 17:36:48,755 | INFO     | generators.citations |  Citations saved: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Kalyani Forge-OnePager\Project_Vulcan_citations.docx
+2026-02-06 17:36:48,755 | INFO     | assets.image_compliance | ImageComplianceChecker initialized
+2026-02-06 17:36:48,755 | INFO     | assets.image_sourcing | ImageSourcing initialized
+2026-02-06 17:36:48,755 | INFO     | assets.image_sourcing | [>] [5/7] Image Sourcing - START
+2026-02-06 17:36:48,756 | INFO     | assets.image_sourcing | Calling LLM for intelligent image query generation...
+2026-02-06 17:36:58,382 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 828 | Out: 64 | Total: 892 tokens
+2026-02-06 17:36:58,383 | INFO     | assets.image_sourcing | [OK] Generated 5 sector-specific image queries
+2026-02-06 17:36:58,383 | INFO     | assets.image_sourcing | Sourcing 5 images with queries: ['CNC machining center precision metal components', 'industrial hydraulic forging press metal manufacturing', 'quality control dimensional measurement industrial inspection', 'precision machined steel engine driveline components', 'automated die casting machine industrial facility']
+2026-02-06 17:36:58,383 | INFO     | assets.image_sourcing | Searching for: 'CNC machining center precision metal components'
+2026-02-06 17:36:59,275 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_1.jpg
+2026-02-06 17:36:59,349 | INFO     | assets.image_compliance |  Image compliant: unsplash_1.jpg
+2026-02-06 17:36:59,351 | INFO     | assets.image_sourcing | Searching for: 'industrial hydraulic forging press metal manufacturing'
+2026-02-06 17:37:00,545 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_2.jpg
+2026-02-06 17:37:00,586 | INFO     | assets.image_compliance |  Image compliant: unsplash_2.jpg
+2026-02-06 17:37:00,588 | INFO     | assets.image_sourcing | Searching for: 'quality control dimensional measurement industrial inspection'
+2026-02-06 17:37:01,287 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_3.jpg
+2026-02-06 17:37:01,325 | INFO     | assets.image_compliance |  Image compliant: unsplash_3.jpg
+2026-02-06 17:37:01,327 | INFO     | assets.image_sourcing | Searching for: 'precision machined steel engine driveline components'
+2026-02-06 17:37:01,901 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_4.jpg
+2026-02-06 17:37:01,940 | INFO     | assets.image_compliance |  Image compliant: unsplash_4.jpg
+2026-02-06 17:37:01,941 | INFO     | assets.image_sourcing | Searching for: 'automated die casting machine industrial facility'
+2026-02-06 17:37:02,658 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_5.jpg
+2026-02-06 17:37:02,700 | INFO     | assets.image_compliance |  Image compliant: unsplash_5.jpg
+2026-02-06 17:37:02,702 | INFO     | assets.image_sourcing | [OK] [5/7] Image Sourcing - DONE
+2026-02-06 17:37:02,703 | INFO     | assets.image_sourcing |  Sourced 5 images
+2026-02-06 17:37:02,703 | INFO     | assemblers.slide_builder | [>] [6/7] PPT Assembly - START
+2026-02-06 17:37:02,704 | INFO     | assemblers.slide_builder | Building Slide 1: Cover
+2026-02-06 17:37:02,709 | INFO     | assemblers.slide_builder | Building Slide 2: Business Profile
+2026-02-06 17:37:02,713 | INFO     | assemblers.slide_builder | Building dense 3-column Business Profile layout
+2026-02-06 17:37:02,779 | INFO     | assemblers.slide_builder | Building Slide 3: Financials
+2026-02-06 17:37:02,793 | INFO     | assemblers.native_charts | Added native COLUMN_CLUSTERED chart
+2026-02-06 17:37:02,799 | INFO     | assemblers.native_charts | Added native LINE chart
+2026-02-06 17:37:02,800 | INFO     | assemblers.slide_builder | Building Slide 4: Investment Highlights
+2026-02-06 17:37:02,803 | INFO     | assemblers.slide_builder | Building Premium Highlights Layout
+2026-02-06 17:37:02,850 | INFO     | assemblers.slide_builder | Added feature image to highlights slide
+2026-02-06 17:37:02,861 | INFO     | assemblers.slide_builder | Building Slide 5: Disclaimer
+2026-02-06 17:37:02,886 | INFO     | assemblers.ppt_template |  Presentation saved: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Kalyani Forge-OnePager\Project_Vulcan_Investment_Teaser.pptx
+2026-02-06 17:37:02,887 | INFO     | assemblers.slide_builder | [OK] [6/7] PPT Assembly - DONE
+2026-02-06 17:37:02,887 | INFO     | assemblers.slide_builder | Presentation created: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Kalyani Forge-OnePager\Project_Vulcan_Investment_Teaser.pptx (5 slides)
+2026-02-06 17:37:02,887 | INFO     | validators.compliance | [>] [7/7] Compliance Validation - START
+2026-02-06 17:37:02,923 | INFO     | validators.compliance | Compliance: Native Charts - PASS 
+2026-02-06 17:37:02,928 | INFO     | validators.compliance | Compliance: Anonymization - PASS 
+2026-02-06 17:37:02,929 | INFO     | validators.compliance | Compliance: Manufacturing Metrics - PASS 
+2026-02-06 17:37:02,930 | INFO     | validators.compliance | Compliance: Citations - PASS 
+2026-02-06 17:37:02,931 | INFO     | validators.compliance | Compliance: Slide Count - PASS (5 slides)
+2026-02-06 17:37:02,931 | INFO     | validators.compliance | Compliance: Branding - PASS 
+2026-02-06 17:37:02,932 | INFO     | validators.compliance | [OK] [7/7] Compliance Validation - DONE
+2026-02-06 17:37:02,932 | INFO     | validators.compliance | Compliance Score: 100.0%
+2026-02-06 17:37:02,932 | INFO     | validators.compliance |  PASSED
+2026-02-06 17:37:02,932 | INFO     | __main__ | Skipping visual review (Renderer or API key missing)
+2026-02-06 17:37:02,933 | INFO     | __main__ | 
+
+2026-02-06 17:37:02,933 | INFO     | __main__ | GENERATION COMPLETE
+2026-02-06 17:37:02,933 | INFO     | __main__ | Presentation: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Kalyani Forge-OnePager\Project_Vulcan_Investment_Teaser.pptx
+2026-02-06 17:37:02,934 | INFO     | __main__ | Citations: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Kalyani Forge-OnePager\Project_Vulcan_citations.docx
+2026-02-06 17:37:02,934 | INFO     | __main__ | Images sourced: 5
+2026-02-06 17:37:02,935 | INFO     | __main__ | API calls: 5
+2026-02-06 17:37:02,935 | INFO     | __main__ | Total tokens: 33,534 (In: 31,501, Out: 2,033)
+2026-02-06 17:37:02,935 | INFO     | __main__ | Execution time: 116.3s (1.9m)
+2026-02-06 17:37:02,936 | INFO     | __main__ | Compliance: 100.0%
+2026-02-06 17:37:02,936 | INFO     | __main__ | Status: PASSED
+2026-02-06 17:37:02,936 | INFO     | __main__ | 

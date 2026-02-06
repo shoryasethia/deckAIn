@@ -1,0 +1,118 @@
+2026-02-06 18:54:08,357 | INFO     | __main__ | Log file: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Gati-OnePager\run_20260206_185408.log
+2026-02-06 18:54:08,358 | INFO     | extractors.private_data | [>] [1/7] Private Data Extraction - START
+2026-02-06 18:54:08,359 | INFO     | extractors.private_data | Read markdown file: Gati-OnePager.md (45044 chars)
+2026-02-06 18:54:08,359 | INFO     | extractors.private_data | Uploading markdown to Gemini File API...
+2026-02-06 18:54:08,359 | INFO     | utils.llm_client | Uploading file to Gemini API: Gati-OnePager.md (45066 bytes)
+2026-02-06 18:54:11,375 | INFO     | utils.llm_client | File uploaded: files/yf0n8hce985h
+2026-02-06 18:54:11,376 | INFO     | extractors.markdown_parser | Parsing markdown: Gati-OnePager.md
+2026-02-06 18:54:11,393 | INFO     | extractors.markdown_parser | Parsed 28 content sections
+2026-02-06 18:54:11,393 | INFO     | extractors.private_data | Calling LLM for financial data extraction (using File API)...
+2026-02-06 18:55:42,126 | WARNING  | utils.llm_client | Detected truncated JSON response (length: 824)
+2026-02-06 18:55:42,126 | INFO     | utils.llm_client |   Attempting robust JSON repair (Cut-Back Strategy)...
+2026-02-06 18:55:42,127 | INFO     | utils.llm_client |   Closing JSON: adding 1 ']' and 1 '}'
+2026-02-06 18:55:42,127 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 24,311 | Out: 643 | Total: 24,954 tokens
+2026-02-06 18:55:42,127 | INFO     | extractors.private_data | Financial data validated successfully
+2026-02-06 18:55:42,128 | INFO     | extractors.private_data | Calculated metrics: CAGR, margins
+2026-02-06 18:55:42,128 | INFO     | extractors.private_data | [OK] [1/7] Private Data Extraction - DONE
+2026-02-06 18:55:42,128 | INFO     | generators.chart_data | [>] [2/7] Chart Data Preparation - START
+2026-02-06 18:55:42,128 | INFO     | generators.chart_data | Using sector-specific chart configuration for Logistics
+2026-02-06 18:55:42,129 | INFO     | generators.chart_data |  Created financial trends chart spec
+2026-02-06 18:55:42,129 | INFO     | generators.chart_data |  Created margin evolution chart spec
+2026-02-06 18:55:42,129 | INFO     | generators.chart_data | [OK] [2/7] Chart Data Preparation - DONE
+2026-02-06 18:55:42,129 | INFO     | generators.chart_data | Generated 2 chart specifications
+2026-02-06 18:55:42,129 | INFO     | generators.content | [>] [3/7] Content Generation - START
+2026-02-06 18:55:42,130 | INFO     | extractors.markdown_parser | Parsing markdown: Gati-OnePager.md
+2026-02-06 18:55:42,142 | INFO     | extractors.markdown_parser | Parsed 28 content sections
+2026-02-06 18:55:42,142 | INFO     | generators.content | Parsed markdown for LLM context
+2026-02-06 18:55:42,143 | INFO     | generators.content | Fetching public market data for sector: Logistics
+2026-02-06 18:55:42,143 | INFO     | extractors.public_data | [>] [1/7] Public Data Scraping - START
+2026-02-06 18:55:42,144 | INFO     | extractors.public_data | Scraping public data for sector: Logistics
+2026-02-06 18:55:44,727 | INFO     | extractors.public_data | Found 3 market size sources
+2026-02-06 18:55:46,602 | INFO     | extractors.public_data | Found 3 trend sources
+2026-02-06 18:55:47,830 | INFO     | extractors.public_data | Found 2 competitive sources
+2026-02-06 18:55:49,689 | INFO     | extractors.public_data | Found 2 news sources
+2026-02-06 18:55:49,689 | INFO     | extractors.public_data | Total public sources collected: 10
+2026-02-06 18:55:49,689 | INFO     | extractors.public_data | [OK] [1/7] Public Data Scraping - DONE
+2026-02-06 18:55:49,690 | INFO     | generators.content | Applied Logistics-specific guidance to prompts
+2026-02-06 18:55:49,690 | INFO     | generators.content | Generating Slide 2 (Business Profile) & Anonymization...
+2026-02-06 18:56:00,246 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,544 | Out: 561 | Total: 3,105 tokens
+2026-02-06 18:56:00,246 | INFO     | generators.content | Generated Codename: Project Swift
+2026-02-06 18:56:00,247 | INFO     | generators.content | Generating Slide 3 (Growth Narrative)...
+2026-02-06 18:56:27,780 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,075 | Out: 171 | Total: 2,246 tokens
+2026-02-06 18:56:27,781 | INFO     | generators.content | Generating Slide 4 (Investment Highlights)...
+2026-02-06 18:56:55,332 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,981 | Out: 374 | Total: 3,355 tokens
+2026-02-06 18:56:55,334 | INFO     | generators.content | Slide content validated successfully
+2026-02-06 18:56:55,334 | INFO     | generators.content | Anonymization verified: Project Swift
+2026-02-06 18:56:55,335 | INFO     | generators.content | [OK] [3/7] Content Generation - DONE
+2026-02-06 18:56:55,335 | INFO     | extractors.public_data | [>] [1/7] Public Data Scraping - START
+2026-02-06 18:56:55,335 | INFO     | extractors.public_data | Scraping public data for sector: Logistics
+2026-02-06 18:56:57,503 | INFO     | extractors.public_data | Found 3 market size sources
+2026-02-06 18:56:59,611 | INFO     | extractors.public_data | Found 3 trend sources
+2026-02-06 18:57:02,542 | INFO     | extractors.public_data | Found 2 competitive sources
+2026-02-06 18:57:04,711 | INFO     | extractors.public_data | Found 2 news sources
+2026-02-06 18:57:04,712 | INFO     | extractors.public_data | Total public sources collected: 10
+2026-02-06 18:57:04,712 | INFO     | extractors.public_data | [OK] [1/7] Public Data Scraping - DONE
+2026-02-06 18:57:04,713 | INFO     | generators.citations | [>] [4/7] Citations Document - START
+2026-02-06 18:57:04,877 | INFO     | generators.citations | [OK] [4/7] Citations Document - DONE
+2026-02-06 18:57:04,879 | INFO     | generators.citations |  Citations saved: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Gati-OnePager\Project_Swift_citations.docx
+2026-02-06 18:57:04,880 | INFO     | assets.image_compliance | ImageComplianceChecker initialized
+2026-02-06 18:57:04,880 | INFO     | assets.image_sourcing | ImageSourcing initialized
+2026-02-06 18:57:04,881 | INFO     | assets.image_sourcing | [>] [5/7] Image Sourcing - START
+2026-02-06 18:57:04,881 | INFO     | assets.image_sourcing | Calling LLM for intelligent image query generation...
+2026-02-06 18:57:14,580 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 794 | Out: 63 | Total: 857 tokens
+2026-02-06 18:57:14,581 | INFO     | assets.image_sourcing | [OK] Generated 5 sector-specific image queries
+2026-02-06 18:57:14,581 | INFO     | assets.image_sourcing | Sourcing 5 images with queries: ['automated conveyor belt sorting logistics facility', 'modern warehouse management system barcode scanning', 'logistics distribution truck fleet highway', 'supply chain management digital tracking dashboard', 'industrial warehouse high-bay racking system']
+2026-02-06 18:57:14,582 | INFO     | assets.image_sourcing | Searching for: 'automated conveyor belt sorting logistics facility'
+2026-02-06 18:57:15,356 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_1.jpg
+2026-02-06 18:57:15,533 | INFO     | assets.image_compliance |  Image compliant: unsplash_1.jpg
+2026-02-06 18:57:15,539 | INFO     | assets.image_sourcing | Searching for: 'modern warehouse management system barcode scanning'
+2026-02-06 18:57:16,479 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_2.jpg
+2026-02-06 18:57:16,562 | INFO     | assets.image_compliance |  Image compliant: unsplash_2.jpg
+2026-02-06 18:57:16,566 | INFO     | assets.image_sourcing | Searching for: 'logistics distribution truck fleet highway'
+2026-02-06 18:57:17,298 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_3.jpg
+2026-02-06 18:57:17,384 | INFO     | assets.image_compliance |  Image compliant: unsplash_3.jpg
+2026-02-06 18:57:17,387 | INFO     | assets.image_sourcing | Searching for: 'supply chain management digital tracking dashboard'
+2026-02-06 18:57:18,148 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_4.jpg
+2026-02-06 18:57:18,241 | INFO     | assets.image_compliance |  Image compliant: unsplash_4.jpg
+2026-02-06 18:57:18,244 | INFO     | assets.image_sourcing | Searching for: 'industrial warehouse high-bay racking system'
+2026-02-06 18:57:18,992 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_5.jpg
+2026-02-06 18:57:19,068 | INFO     | assets.image_compliance |  Image compliant: unsplash_5.jpg
+2026-02-06 18:57:19,070 | INFO     | assets.image_sourcing | [OK] [5/7] Image Sourcing - DONE
+2026-02-06 18:57:19,071 | INFO     | assets.image_sourcing |  Sourced 5 images
+2026-02-06 18:57:19,071 | INFO     | assemblers.slide_builder | [>] [6/7] PPT Assembly - START
+2026-02-06 18:57:19,071 | INFO     | assemblers.slide_builder | Building Slide 1: Cover
+2026-02-06 18:57:19,081 | INFO     | assemblers.slide_builder | Building Slide 2: Business Profile
+2026-02-06 18:57:19,087 | INFO     | assemblers.slide_builder | Building split Business Profile layout
+2026-02-06 18:57:19,132 | INFO     | assemblers.slide_builder | Building Slide 3: Financials
+2026-02-06 18:57:19,160 | INFO     | assemblers.native_charts | Added native COLUMN_CLUSTERED chart
+2026-02-06 18:57:19,171 | INFO     | assemblers.native_charts | Added native LINE chart
+2026-02-06 18:57:19,171 | INFO     | assemblers.slide_builder | Building Slide 4: Investment Highlights
+2026-02-06 18:57:19,180 | INFO     | assemblers.slide_builder | Building Premium Highlights Layout
+2026-02-06 18:57:19,272 | INFO     | assemblers.slide_builder | Building Slide 5: Disclaimer
+2026-02-06 18:57:19,310 | INFO     | assemblers.ppt_template |  Presentation saved: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Gati-OnePager\Project_Swift_Investment_Teaser.pptx
+2026-02-06 18:57:19,311 | INFO     | assemblers.slide_builder | [OK] [6/7] PPT Assembly - DONE
+2026-02-06 18:57:19,311 | INFO     | assemblers.slide_builder | Presentation created: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Gati-OnePager\Project_Swift_Investment_Teaser.pptx (5 slides)
+2026-02-06 18:57:19,311 | INFO     | validators.compliance | [>] [7/7] Compliance Validation - START
+2026-02-06 18:57:19,369 | INFO     | validators.compliance | Compliance: Native Charts - PASS 
+2026-02-06 18:57:19,386 | INFO     | validators.compliance | Compliance: Anonymization - PASS 
+2026-02-06 18:57:19,388 | INFO     | validators.compliance | Compliance: Logistics Metrics - FAIL 
+2026-02-06 18:57:19,388 | WARNING  | validators.compliance | Missing Logistics-specific KPIs: utilization, hub_count, ton_km, fleet_size
+2026-02-06 18:57:19,389 | INFO     | validators.compliance | Compliance: Citations - PASS 
+2026-02-06 18:57:19,389 | INFO     | validators.compliance | Compliance: Slide Count - PASS (5 slides)
+2026-02-06 18:57:19,392 | INFO     | validators.compliance | Compliance: Branding - PASS 
+2026-02-06 18:57:19,393 | INFO     | validators.compliance | [OK] [7/7] Compliance Validation - DONE
+2026-02-06 18:57:19,393 | INFO     | validators.compliance | Compliance Score: 83.3%
+2026-02-06 18:57:19,393 | INFO     | validators.compliance |  PASSED
+2026-02-06 18:57:19,394 | INFO     | __main__ | Skipping visual review (Renderer or API key missing)
+2026-02-06 18:57:19,395 | INFO     | __main__ | 
+
+2026-02-06 18:57:19,395 | INFO     | __main__ | GENERATION COMPLETE
+2026-02-06 18:57:19,396 | INFO     | __main__ | Presentation: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Gati-OnePager\Project_Swift_Investment_Teaser.pptx
+2026-02-06 18:57:19,396 | INFO     | __main__ | Citations: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Gati-OnePager\Project_Swift_citations.docx
+2026-02-06 18:57:19,396 | INFO     | __main__ | Images sourced: 5
+2026-02-06 18:57:19,397 | INFO     | __main__ | API calls: 5
+2026-02-06 18:57:19,397 | INFO     | __main__ | Total tokens: 34,517 (In: 32,705, Out: 1,812)
+2026-02-06 18:57:19,398 | INFO     | __main__ | Execution time: 191.0s (3.2m)
+2026-02-06 18:57:19,398 | INFO     | __main__ | Compliance: 83.3%
+2026-02-06 18:57:19,399 | INFO     | __main__ | Status: PASSED
+2026-02-06 18:57:19,399 | INFO     | __main__ | 

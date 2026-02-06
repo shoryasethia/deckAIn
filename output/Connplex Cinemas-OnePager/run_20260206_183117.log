@@ -1,0 +1,118 @@
+2026-02-06 18:31:17,956 | INFO     | __main__ | Log file: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Connplex Cinemas-OnePager\run_20260206_183117.log
+2026-02-06 18:31:17,957 | INFO     | extractors.private_data | [>] [1/7] Private Data Extraction - START
+2026-02-06 18:31:17,958 | INFO     | extractors.private_data | Read markdown file: Connplex Cinemas-OnePager.md (26219 chars)
+2026-02-06 18:31:17,958 | INFO     | extractors.private_data | Uploading markdown to Gemini File API...
+2026-02-06 18:31:17,959 | INFO     | utils.llm_client | Uploading file to Gemini API: Connplex Cinemas-OnePager.md (26242 bytes)
+2026-02-06 18:31:20,453 | INFO     | utils.llm_client | File uploaded: files/kx6ylitpnl4x
+2026-02-06 18:31:20,455 | INFO     | extractors.markdown_parser | Parsing markdown: Connplex Cinemas-OnePager.md
+2026-02-06 18:31:20,471 | INFO     | extractors.markdown_parser | Parsed 28 content sections
+2026-02-06 18:31:20,471 | INFO     | extractors.private_data | Calling LLM for financial data extraction (using File API)...
+2026-02-06 18:31:39,970 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 14,067 | Out: 359 | Total: 14,426 tokens
+2026-02-06 18:31:39,971 | INFO     | extractors.private_data | Financial data validated successfully
+2026-02-06 18:31:39,971 | INFO     | extractors.private_data | Calculated metrics: CAGR, margins
+2026-02-06 18:31:39,971 | INFO     | extractors.private_data | [OK] [1/7] Private Data Extraction - DONE
+2026-02-06 18:31:39,972 | INFO     | generators.chart_data | [>] [2/7] Chart Data Preparation - START
+2026-02-06 18:31:39,972 | INFO     | generators.chart_data | Using sector-specific chart configuration for Services
+2026-02-06 18:31:39,972 | INFO     | generators.chart_data |  Created financial trends chart spec
+2026-02-06 18:31:39,972 | INFO     | generators.chart_data |  Created margin evolution chart spec
+2026-02-06 18:31:39,972 | INFO     | generators.chart_data | [OK] [2/7] Chart Data Preparation - DONE
+2026-02-06 18:31:39,972 | INFO     | generators.chart_data | Generated 2 chart specifications
+2026-02-06 18:31:39,973 | INFO     | generators.content | [>] [3/7] Content Generation - START
+2026-02-06 18:31:39,973 | INFO     | extractors.markdown_parser | Parsing markdown: Connplex Cinemas-OnePager.md
+2026-02-06 18:31:39,980 | INFO     | extractors.markdown_parser | Parsed 28 content sections
+2026-02-06 18:31:39,981 | INFO     | generators.content | Parsed markdown for LLM context
+2026-02-06 18:31:39,981 | INFO     | generators.content | Fetching public market data for sector: Services
+2026-02-06 18:31:39,981 | INFO     | extractors.public_data | [>] [1/7] Public Data Scraping - START
+2026-02-06 18:31:39,981 | INFO     | extractors.public_data | Scraping public data for sector: Services
+2026-02-06 18:31:41,554 | INFO     | extractors.public_data | Found 3 market size sources
+2026-02-06 18:31:43,980 | INFO     | extractors.public_data | Found 3 trend sources
+2026-02-06 18:31:45,490 | INFO     | extractors.public_data | Found 2 competitive sources
+2026-02-06 18:31:49,115 | INFO     | extractors.public_data | Found 2 news sources
+2026-02-06 18:31:49,115 | INFO     | extractors.public_data | Total public sources collected: 10
+2026-02-06 18:31:49,115 | INFO     | extractors.public_data | [OK] [1/7] Public Data Scraping - DONE
+2026-02-06 18:31:49,116 | INFO     | generators.content | Applied Services-specific guidance to prompts
+2026-02-06 18:31:49,116 | INFO     | generators.content | Generating Slide 2 (Business Profile) & Anonymization...
+2026-02-06 18:31:58,539 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,160 | Out: 547 | Total: 2,707 tokens
+2026-02-06 18:31:58,540 | INFO     | generators.content | Generated Codename: Project Lumina
+2026-02-06 18:31:58,541 | INFO     | generators.content | Generating Slide 3 (Growth Narrative)...
+2026-02-06 18:32:06,128 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 1,691 | Out: 177 | Total: 1,868 tokens
+2026-02-06 18:32:06,129 | INFO     | generators.content | Generating Slide 4 (Investment Highlights)...
+2026-02-06 18:32:18,560 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 2,704 | Out: 308 | Total: 3,012 tokens
+2026-02-06 18:32:18,566 | INFO     | generators.content | Slide content validated successfully
+2026-02-06 18:32:18,567 | INFO     | generators.content | Anonymization verified: Project Lumina
+2026-02-06 18:32:18,567 | INFO     | generators.content | [OK] [3/7] Content Generation - DONE
+2026-02-06 18:32:18,568 | INFO     | extractors.public_data | [>] [1/7] Public Data Scraping - START
+2026-02-06 18:32:18,568 | INFO     | extractors.public_data | Scraping public data for sector: Services
+2026-02-06 18:32:20,167 | INFO     | extractors.public_data | Found 3 market size sources
+2026-02-06 18:32:22,392 | INFO     | extractors.public_data | Found 3 trend sources
+2026-02-06 18:32:24,517 | INFO     | extractors.public_data | Found 2 competitive sources
+2026-02-06 18:32:26,981 | INFO     | extractors.public_data | Found 2 news sources
+2026-02-06 18:32:26,982 | INFO     | extractors.public_data | Total public sources collected: 10
+2026-02-06 18:32:26,982 | INFO     | extractors.public_data | [OK] [1/7] Public Data Scraping - DONE
+2026-02-06 18:32:26,982 | INFO     | generators.citations | [>] [4/7] Citations Document - START
+2026-02-06 18:32:27,051 | INFO     | generators.citations | [OK] [4/7] Citations Document - DONE
+2026-02-06 18:32:27,051 | INFO     | generators.citations |  Citations saved: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Connplex Cinemas-OnePager\Project_Lumina_citations.docx
+2026-02-06 18:32:27,051 | INFO     | assets.image_compliance | ImageComplianceChecker initialized
+2026-02-06 18:32:27,051 | INFO     | assets.image_sourcing | ImageSourcing initialized
+2026-02-06 18:32:27,052 | INFO     | assets.image_sourcing | [>] [5/7] Image Sourcing - START
+2026-02-06 18:32:27,052 | INFO     | assets.image_sourcing | Calling LLM for intelligent image query generation...
+2026-02-06 18:32:33,947 | INFO     | utils.llm_client | API Call: gemini-3-flash-preview | In: 813 | Out: 65 | Total: 878 tokens
+2026-02-06 18:32:33,948 | INFO     | assets.image_sourcing | [OK] Generated 5 sector-specific image queries
+2026-02-06 18:32:33,948 | INFO     | assets.image_sourcing | Sourcing 5 images with queries: ['digital cinema 4k laser projector booth', 'professional cinema manager multiplex lobby operations', 'luxury cinema concession stand food service', 'cinema lobby digital signage advertising display', 'modern multiplex auditorium luxury recliner seating']
+2026-02-06 18:32:33,949 | INFO     | assets.image_sourcing | Searching for: 'digital cinema 4k laser projector booth'
+2026-02-06 18:32:35,374 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_1.jpg
+2026-02-06 18:32:35,430 | INFO     | assets.image_compliance |  Image compliant: unsplash_1.jpg
+2026-02-06 18:32:35,432 | INFO     | assets.image_sourcing | Searching for: 'professional cinema manager multiplex lobby operations'
+2026-02-06 18:32:36,103 | WARNING  | assets.image_sourcing | Unsplash sourcing failed: 404 Client Error: Not Found for url: https://api.unsplash.com/photos/random?query=professional+cinema+manager+multiplex+lobby+operations&client_id=xqzU8__1TDnNX5F-ZU2dhcqc3kcF2fRzl2VEBUHmPg0&orientation=landscape
+2026-02-06 18:32:37,523 | INFO     | assets.image_sourcing |  Downloaded from DuckDuckGo: ddg_2.jpg
+2026-02-06 18:32:37,539 | WARNING  | assets.image_compliance |  Low resolution image: 474x256
+2026-02-06 18:32:37,560 | WARNING  | assets.image_compliance |  Image has issues: Low resolution: 474x256
+2026-02-06 18:32:37,561 | INFO     | assets.image_sourcing | Searching for: 'luxury cinema concession stand food service'
+2026-02-06 18:32:38,584 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_3.jpg
+2026-02-06 18:32:38,616 | INFO     | assets.image_compliance |  Image compliant: unsplash_3.jpg
+2026-02-06 18:32:38,620 | INFO     | assets.image_sourcing | Searching for: 'cinema lobby digital signage advertising display'
+2026-02-06 18:32:39,223 | INFO     | assets.image_sourcing |  Downloaded from Unsplash: unsplash_4.jpg
+2026-02-06 18:32:39,267 | INFO     | assets.image_compliance |  Image compliant: unsplash_4.jpg
+2026-02-06 18:32:39,268 | INFO     | assets.image_sourcing | Searching for: 'modern multiplex auditorium luxury recliner seating'
+2026-02-06 18:32:39,772 | WARNING  | assets.image_sourcing | Unsplash sourcing failed: 404 Client Error: Not Found for url: https://api.unsplash.com/photos/random?query=modern+multiplex+auditorium+luxury+recliner+seating&client_id=xqzU8__1TDnNX5F-ZU2dhcqc3kcF2fRzl2VEBUHmPg0&orientation=landscape
+2026-02-06 18:32:41,314 | INFO     | assets.image_sourcing |  Downloaded from DuckDuckGo: ddg_5.jpg
+2026-02-06 18:32:41,499 | WARNING  | assets.image_compliance |  Low resolution image: 400x300
+2026-02-06 18:32:41,530 | WARNING  | assets.image_compliance |  Image has issues: Low resolution: 400x300
+2026-02-06 18:32:41,531 | INFO     | assets.image_sourcing | [OK] [5/7] Image Sourcing - DONE
+2026-02-06 18:32:41,531 | INFO     | assets.image_sourcing |  Sourced 5 images
+2026-02-06 18:32:41,531 | INFO     | assemblers.slide_builder | [>] [6/7] PPT Assembly - START
+2026-02-06 18:32:41,531 | INFO     | assemblers.slide_builder | Building Slide 1: Cover
+2026-02-06 18:32:41,537 | INFO     | assemblers.slide_builder | Building Slide 2: Business Profile
+2026-02-06 18:32:41,541 | INFO     | assemblers.slide_builder | Building split Business Profile layout
+2026-02-06 18:32:41,564 | INFO     | assemblers.slide_builder | Building Slide 3: Financials
+2026-02-06 18:32:41,579 | INFO     | assemblers.native_charts | Added native COLUMN_CLUSTERED chart
+2026-02-06 18:32:41,584 | INFO     | assemblers.native_charts | Added native LINE chart
+2026-02-06 18:32:41,585 | INFO     | assemblers.slide_builder | Building Slide 4: Investment Highlights
+2026-02-06 18:32:41,588 | INFO     | assemblers.slide_builder | Building Premium Highlights Layout
+2026-02-06 18:32:41,694 | INFO     | assemblers.slide_builder | Building Slide 5: Disclaimer
+2026-02-06 18:32:41,709 | INFO     | assemblers.ppt_template |  Presentation saved: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Connplex Cinemas-OnePager\Project_Lumina_Investment_Teaser.pptx
+2026-02-06 18:32:41,709 | INFO     | assemblers.slide_builder | [OK] [6/7] PPT Assembly - DONE
+2026-02-06 18:32:41,709 | INFO     | assemblers.slide_builder | Presentation created: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Connplex Cinemas-OnePager\Project_Lumina_Investment_Teaser.pptx (5 slides)
+2026-02-06 18:32:41,710 | INFO     | validators.compliance | [>] [7/7] Compliance Validation - START
+2026-02-06 18:32:41,746 | INFO     | validators.compliance | Compliance: Native Charts - PASS 
+2026-02-06 18:32:41,751 | INFO     | validators.compliance | Compliance: Anonymization - PASS 
+2026-02-06 18:32:41,752 | INFO     | validators.compliance | Compliance: Services Metrics - PASS 
+2026-02-06 18:32:41,752 | INFO     | validators.compliance | Compliance: Citations - PASS 
+2026-02-06 18:32:41,753 | INFO     | validators.compliance | Compliance: Slide Count - PASS (5 slides)
+2026-02-06 18:32:41,753 | INFO     | validators.compliance | Compliance: Branding - PASS 
+2026-02-06 18:32:41,754 | INFO     | validators.compliance | [OK] [7/7] Compliance Validation - DONE
+2026-02-06 18:32:41,754 | INFO     | validators.compliance | Compliance Score: 100.0%
+2026-02-06 18:32:41,754 | INFO     | validators.compliance |  PASSED
+2026-02-06 18:32:41,755 | INFO     | __main__ | Skipping visual review (Renderer or API key missing)
+2026-02-06 18:32:41,755 | INFO     | __main__ | 
+
+2026-02-06 18:32:41,755 | INFO     | __main__ | GENERATION COMPLETE
+2026-02-06 18:32:41,755 | INFO     | __main__ | Presentation: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Connplex Cinemas-OnePager\Project_Lumina_Investment_Teaser.pptx
+2026-02-06 18:32:41,755 | INFO     | __main__ | Citations: C:\Users\shory\Desktop\AI-ML-GC\deckain\output\Connplex Cinemas-OnePager\Project_Lumina_citations.docx
+2026-02-06 18:32:41,756 | INFO     | __main__ | Images sourced: 5
+2026-02-06 18:32:41,756 | INFO     | __main__ | API calls: 5
+2026-02-06 18:32:41,756 | INFO     | __main__ | Total tokens: 22,891 (In: 21,435, Out: 1,456)
+2026-02-06 18:32:41,756 | INFO     | __main__ | Execution time: 83.8s (1.4m)
+2026-02-06 18:32:41,756 | INFO     | __main__ | Compliance: 100.0%
+2026-02-06 18:32:41,756 | INFO     | __main__ | Status: PASSED
+2026-02-06 18:32:41,757 | INFO     | __main__ | 
