@@ -63,3 +63,4 @@ debug_*.pptx
 check_groq_models.py
 setup_icons.py
 groq_models.txt
+batch_generate.py

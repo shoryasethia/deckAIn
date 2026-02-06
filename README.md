@@ -102,9 +102,6 @@ python main.py "..\Company Data\technology-ksolves\Ksolves-OnePager.md" --sector
 
 # Entertainment / Services
 python main.py "..\Company Data\entertainment-connplex\Connplex Cinemas-OnePager.md" --sector Services --company "connplex"
-
-# Batch generation (all companies)
-python batch_generate.py
 ```
 
 ---
